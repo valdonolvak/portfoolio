@@ -79,6 +79,11 @@ section h3{font-size:19px;margin:28px 0 12px;color:var(--muted);font-weight:600;
 details{margin-top:12px}
 summary{cursor:pointer;color:var(--accent);font-weight:600}
 
+.lead{max-width:72ch;margin:0 0 22px}
+.practice{margin:0;padding-left:22px}
+.practice li{padding:4px 0}
+.theory{margin:16px 0 0;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+
 footer{padding:36px 0 48px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
@@ -93,10 +98,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
     <nav aria-label="Peamenüü">
       <ul>
         <li><a href="#avaleht">Avaleht</a></li>
+        <li><a href="#filosoofia">Õpetamisfilosoofia</a></li>
         <li><a href="#cv">CV</a></li>
         <li><a href="#enesetaiendamine">Enesetäiendamine</a></li>
         <li><a href="#koolitused">Koolitused</a></li>
-        <li><a href="#oppematerjalid">Õppematerjalid</a></li>
         <li><a href="#valdkonna-arendus">Valdkonna arendus</a></li>
         <li><a href="#hobid">Hobid</a></li>
       </ul>
@@ -115,8 +120,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
     <div>
       <h1>Valdo Nõlvak</h1>
       <p class="role">IT kutseõpetaja · IT süsteemide administraator</p>
-      <p>Olen Haapsalu Kutsehariduskeskuses IT kutseõpetaja. Õpetan IT korralduse aluseid, operatsioonisüsteemide aluseid ning Windows- ja Linux-serverite haldust.</p>
+      <p>Olen Haapsalu Kutsehariduskeskuses IT kutseõpetaja. Õpetan IT korralduse aluseid, operatsioonisüsteemide aluseid, küberturvalisust ja Windowsi serverite haldust; varasematel aastatel olen õpetanud ka Linuxi serverite haldust.</p>
       <p>Lisaks töötan osalise ajaga Põhja-Eesti Regionaalhaiglas IT süsteemide administraatorina. See töö täiendab minu igapäevast praktikat kutseõpetajana ja annab kogemusi, mida saan oma õppeainetes rakendada.</p>
+      <p>Alates 2026. aastast õpin Tallinna Ülikoolis kutseõpetaja magistriõppes (1. kursus), et süvendada oma pedagoogilist ettevalmistust.</p>
       <div class="tags">
         <span class="tag">Windows Server</span><span class="tag">Linux</span><span class="tag">Võrgud (CCNA, Junos)</span>
         <span class="tag">Küberturve</span><span class="tag">Pilv ja DevOps</span><span class="tag">ITIL 4</span>
@@ -128,6 +134,43 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
     </div>
   </div>
 </div>
+
+<!-- ÕPETAMISFILOSOOFIA -->
+<section id="filosoofia">
+  <div class="wrap">
+    <h2>Õpetamisfilosoofia</h2>
+    <p class="lead"><strong>Õpetamine on minu jaoks kogemuse ja mõistmise ülesehitamine.</strong> Usun, et õppija ei võta teadmist vastu nagu tühja anumasse valatud vedelikku, vaid ehitab seda ise üles oma olemasolevate teadmiste ja elukogemuse peale. Seepärast selgitan alati kõigepealt välja, mida õppija juba teab ja on kogenud, ning seon uue mõiste sellega. Kui noorele inimesele selgitada võrguteenust millegi kaudu, mida ta igapäevaelust tunneb, muutub abstraktne termin tähenduslikuks ja jääb meelde.</p>
+    <div class="grid2">
+      <div class="card">
+        <h3 style="margin-top:0">Käed külge enne definitsiooni</h3>
+        <p>IT-d ei õpi lugedes, vaid tehes. Püüan anda õppijale võimalikult kiiresti praktilise kogemuse: ta seadistab, paneb tööle, rikub ja parandab. Teooria tuleb siis, kui õppijal on juba küsimus, millele see vastab. Seda toetab õppelabor, kus õppijad haldavad virtuaalservereid ja -kliente (Proxmox) ka väljaspool kooli.</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">Arutlev tund ja oma sõnadega selgitamine</h3>
+        <p>Minu tunnid on dialoogid. Küsin palju IT-terminoloogia kohta ja palun õppijatel mõisteid lihtsamate sõnadega ümber sõnastada. Definitsiooni ettelugemisest mulle ei piisa: kui õppija suudab loetut või kuuldut oma sõnadega selgitada, on lootust, et ta saab mõistest paremini aru.</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">Eksimine on õppimise osa</h3>
+        <p>Põhikoolijärgsed õppijad kardavad sageli eksida, sest neil on eksimine varem seostunud halva hindega. Loon tunnis keskkonna, kus eksimus on tavaline ja turvaline: serveri rikkumine laboris on hea võimalus diagnostikat õppida. Julgustan õppijaid arvamust avaldama ka siis, kui nad pole kindlad, sest see, milles eksime, jääb sageli paremini meelde.</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">Positiivne hoiak ja usk õppijasse</h3>
+        <p>Püüan tunnis anda edasi positiivset ellusuhtumist, et õppijad usuksid endasse ning kogeksid oma väärtust nii õppija kui ka inimesena. Tean omast kogemusest, et õppija, kes ütleb endale „ma ei oska“, õpib vähem kui see, kes ütleb „ma ei oska veel“.</p>
+      </div>
+    </div>
+    <div class="card" style="margin-top:18px">
+      <h3 style="margin-top:0">Mida see tähendab praktikas</h3>
+      <ol class="practice">
+        <li>Alustan tuttavast ja liigun tundmatuni.</li>
+        <li>Esitan tunnis rohkem küsimusi, kui annan vastuseid.</li>
+        <li>Hinnang ja tagasiside on toetavad ning suunavad järgmise sammuni.</li>
+        <li>Seon õppeülesanded päris töömaailmaga, kus tööandja ootab, et noor oskab probleemi lahendada ja oma lahendust selgitada.</li>
+        <li>Pärast iga õppeperioodi reflekteerin, mis töötas ja mida muudan.</li>
+      </ol>
+      <p class="theory">Toetun Komenský näitlikkuse ja hirmuvaba õppimise põhimõtetele, konstruktivismile (Piaget, Vygotski, Bruner), kogemusõppele (Dewey, Kolb), kognitiivsele õpipoisiõppele (Collins, Brown ja Newman) ning täiskasvanutega töötades Knowlesi andragoogikale. Minu tunni ülesehitus on <em>näita – tee koos – tee ise – selgita</em>.</p>
+    </div>
+  </div>
+</section>
 
 <!-- CV -->
 <section id="cv">
@@ -150,6 +193,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
       <div class="card">
         <h3 style="margin-top:0">Haridustee</h3>
         <ul class="timeline">
+          <li><span class="when">2026 – <span class="now">praegu</span></span><span class="what"><strong>Kutseõpetaja, magistriõpe</strong><span>Tallinna Ülikool, 1. kursus (alates 31.08.2026, kaugõpe)</span></span></li>
           <li><span class="when">2024 – 2025</span><span class="what"><strong>Cloud-native application design and DevOps</strong><span>Tartu Ülikool, mikrokraad (5.02.2024 – 1.02.2025)</span></span></li>
           <li><span class="when">2006 – 2009</span><span class="what"><strong>Rakendusinformaatika</strong><span>Tallinna Ülikooli Haapsalu Kolledž, rakenduskõrgharidus</span></span></li>
           <li><span class="when">1998 – 2002</span><span class="what"><strong>Teoloogia</strong><span>EMK Teoloogiline Seminar, rakenduskõrgharidus</span></span></li>
@@ -245,31 +289,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
         <ul class="list">
           <li><span class="yr">2009</span><span>Täiskasvanutele AO 1–7 koolitused<span class="meta">märts–aug 2009 · 80 tundi</span></span></li>
         </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ÕPPEMATERJALID -->
-<section id="oppematerjalid">
-  <div class="wrap">
-    <h2>Õppematerjalid</h2>
-    <p style="margin-top:0">Olen loonud õppematerjale õpilastele erinevate allikate põhjal.</p>
-    <div class="grid2">
-      <div class="card">
-        <h3 style="margin-top:0">Operatsioonisüsteemide alused</h3>
-        <p>Olen teinud õpilastele refereeringu Elena Vendelini sissejuhatavast kursusest „Operatsioonisüsteemid“. Jagan õpilastele ka teisi häid internetis leiduvaid materjale ja olen osa neist eestindanud, näiteks mäluhalduse teema, kuhu olen kogunud ka seda teemat tutvustavaid videomaterjale.</p>
-        <p>Õpitu hindamiseks kasutan Google Formsiga koostatud teooriateste.</p>
-        <p><a href="https://sites.google.com/hkhk.edu.ee/operatsioonisysteemid/operatsioonis%C3%BCsteemid/m%C3%A4luhaldus" target="_blank" rel="noopener">Mäluhaldus →</a></p>
-      </div>
-      <div class="card">
-        <h3 style="margin-top:0">Windowsi operatsioonisüsteemid</h3>
-        <p>See valdkond areneb kiiresti ja internetis on palju väga häid materjale, mida selles aines õpilastega jagan. Mõned neist olen järk-järgult ka eestindanud.</p>
-        <p><a href="https://sites.google.com/hkhk.edu.ee/windows-server/k%C3%A4ed-vaba-windows-10-paigaldus-l%C3%A4bi-wds-i" target="_blank" rel="noopener">Käed vaba Windows 10 paigaldus läbi WDS-i →</a></p>
-      </div>
-      <div class="card">
-        <h3 style="margin-top:0">IT taristu ülalhoid</h3>
-        <p>Olen koostanud hulga offline-materjale ja esitlusi, mille teemad on näiteks IT-õigus, projektijuhtimine, hanked, dokumentatsioon ja IT-strateegia koostamine.</p>
       </div>
     </div>
   </div>
