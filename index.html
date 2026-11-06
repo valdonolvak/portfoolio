@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Valdo Nõlvak — IT kutseõpetaja ja süsteemiadministraator</title>
+<meta name="description" content="Valdo Nõlvaku portfoolio: IT kutseõpetaja Haapsalu Kutsehariduskeskuses ja IT süsteemide administraator Põhja-Eesti Regionaalhaiglas.">
+<meta property="og:title" content="Valdo Nõlvak — portfoolio">
+<meta property="og:description" content="IT kutseõpetaja ja süsteemiadministraator. CV, enesetäiendamine, koolitused, õppematerjalid.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230f766e'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='700' font-size='28' fill='white'>VN</text></svg>">
+<style>
+:root{
+  --bg:#f7f7f5; --surface:#ffffff; --text:#1c1f23; --muted:#5d6670; --line:#e3e5e8;
+  --accent:#0f766e; --accent-soft:#e6f4f2; --radius:14px; --max:960px;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#121416;--surface:#1b1e21;--text:#e8eaed;--muted:#9aa3ad;--line:#2c3136;--accent:#2dd4bf;--accent-soft:#163a37;}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:17px}
+a{color:var(--accent)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+/* Navigatsioon */
+header.nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.nav .wrap{display:flex;align-items:center;gap:16px;height:60px}
+.brand{font-weight:700;text-decoration:none;color:var(--text);white-space:nowrap}
+nav ul{display:flex;gap:4px;list-style:none;margin:0 0 0 auto;padding:0;overflow-x:auto;scrollbar-width:none}
+nav ul::-webkit-scrollbar{display:none}
+nav a{display:block;padding:6px 10px;border-radius:8px;text-decoration:none;color:var(--muted);font-size:15px;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--accent);background:var(--accent-soft)}
+@media (max-width:760px){header.nav .wrap{flex-direction:column;align-items:stretch;height:auto;padding-top:10px;gap:4px}nav ul{margin:0 -10px;padding-bottom:8px}}
+
+/* Hero */
+.hero{padding:72px 0 48px}
+.hero .wrap{display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center}
+.avatar{width:150px;height:150px;border-radius:50%;object-fit:cover;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:52px;font-weight:700;border:4px solid var(--surface);box-shadow:0 6px 24px rgba(0,0,0,.12)}
+.hero h1{font-size:clamp(32px,5vw,46px);margin:0 0 4px;line-height:1.15}
+.hero .role{color:var(--accent);font-weight:600;margin:0 0 16px}
+.hero p{margin:0 0 12px;max-width:62ch}
+blockquote{margin:22px 0 0;padding:12px 18px;border-left:3px solid var(--accent);color:var(--muted);font-style:italic;background:var(--surface);border-radius:0 var(--radius) var(--radius) 0}
+blockquote cite{display:block;font-style:normal;font-size:14px;margin-top:4px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.tag{font-size:13px;padding:4px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:600}
+@media (max-width:640px){.hero{padding-top:40px}.hero .wrap{grid-template-columns:1fr;text-align:left}.avatar{width:110px;height:110px;font-size:38px}}
+
+/* Sektsioonid */
+section{padding:44px 0;border-top:1px solid var(--line)}
+section h2{font-size:28px;margin:0 0 22px}
+section h3{font-size:19px;margin:28px 0 12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:760px){.grid2{grid-template-columns:1fr}}
+
+/* Ajajoon */
+.timeline{list-style:none;margin:0;padding:0}
+.timeline li{display:grid;grid-template-columns:170px 1fr;gap:16px;padding:10px 0;border-bottom:1px dashed var(--line)}
+.timeline li:last-child{border-bottom:0}
+.timeline .when{color:var(--muted);font-variant-numeric:tabular-nums;font-size:15px}
+.timeline .what strong{display:block}
+.timeline .what span{color:var(--muted);font-size:15px}
+.timeline .now{color:var(--accent);font-weight:600}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:0}}
+
+/* Koolituste nimekiri */
+.list{list-style:none;margin:0;padding:0}
+.list li{padding:10px 0;border-bottom:1px solid var(--line);display:flex;gap:14px}
+.list li:last-child{border-bottom:0}
+.list .yr{flex:0 0 auto;min-width:112px;color:var(--muted);font-size:15px;font-variant-numeric:tabular-nums}
+.list .meta{display:block;color:var(--muted);font-size:14px}
+@media (max-width:560px){.list li{flex-direction:column;gap:0}}
+
+.hobbies{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;list-style:none;padding:0;margin:0}
+.hobbies li{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;display:flex;gap:10px;align-items:center}
+.hobbies .ic{font-size:22px}
+
+details{margin-top:12px}
+summary{cursor:pointer;color:var(--accent);font-weight:600}
+
+footer{padding:36px 0 48px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+@media print{header.nav{display:none}section{break-inside:avoid-page}body{background:#fff}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#avaleht">Valdo Nõlvak</a>
+    <nav aria-label="Peamenüü">
+      <ul>
+        <li><a href="#avaleht">Avaleht</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#enesetaiendamine">Enesetäiendamine</a></li>
+        <li><a href="#koolitused">Koolitused</a></li>
+        <li><a href="#oppematerjalid">Õppematerjalid</a></li>
+        <li><a href="#valdkonna-arendus">Valdkonna arendus</a></li>
+        <li><a href="#hobid">Hobid</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- AVALEHT -->
+<div class="hero" id="avaleht">
+  <div class="wrap">
+    <!-- Profiilifoto: pane fail assets/profiil.jpg; kui faili pole, näidatakse initsiaale -->
+    <img class="avatar" src="assets/profiil.jpg" alt="Valdo Nõlvak"
+         onerror="this.outerHTML='<div class=&quot;avatar&quot; aria-hidden=&quot;true&quot;>VN</div>'">
+    <div>
+      <h1>Valdo Nõlvak</h1>
+      <p class="role">IT kutseõpetaja · IT süsteemide administraator</p>
+      <p>Olen Haapsalu Kutsehariduskeskuses IT kutseõpetaja. Õpetan IT korralduse aluseid, operatsioonisüsteemide aluseid ning Windows- ja Linux-serverite haldust.</p>
+      <p>Lisaks töötan osalise ajaga Põhja-Eesti Regionaalhaiglas IT süsteemide administraatorina. See töö täiendab minu igapäevast praktikat kutseõpetajana ja annab kogemusi, mida saan oma õppeainetes rakendada.</p>
+      <div class="tags">
+        <span class="tag">Windows Server</span><span class="tag">Linux</span><span class="tag">Võrgud (CCNA, Junos)</span>
+        <span class="tag">Küberturve</span><span class="tag">Pilv ja DevOps</span><span class="tag">ITIL 4</span>
+      </div>
+      <blockquote>
+        „Õpetaja on inimene, kes hoolsa aednikuna paneb iga päev tükikese oma mõistusest ja südamest noortele kaasa.“
+        <cite>— <a href="https://tsitaadid.ee/quote/1650/177" target="_blank" rel="noopener">Toomas Hendrik Ilves</a></cite>
+      </blockquote>
+    </div>
+  </div>
+</div>
+
+<!-- CV -->
+<section id="cv">
+  <div class="wrap">
+    <h2>CV</h2>
+    <div class="grid2">
+      <div class="card">
+        <h3 style="margin-top:0">Töökogemus</h3>
+        <ul class="timeline">
+          <li><span class="when">okt 2020 – <span class="now">praegu</span></span><span class="what"><strong>IT-spetsialist</strong><span>Põhja-Eesti Regionaalhaigla</span></span></li>
+          <li><span class="when">sept 2010 – <span class="now">praegu</span></span><span class="what"><strong>Kutseõpetaja</strong><span>Haapsalu Kutsehariduskeskus</span></span></li>
+          <li><span class="when">juuli 2007 – sept 2020</span><span class="what"><strong>IT-spetsialist</strong><span>SA Läänemaa Haigla</span></span></li>
+          <li><span class="when">sept 2006 – aug 2010</span><span class="what"><strong>Arvutiõpetaja</strong><span>Ridala Põhikool</span></span></li>
+          <li><span class="when">juuli 2005 – sept 2007</span><span class="what"><strong>Pastor</strong><span>Ridala Baptisti Kogudus</span></span></li>
+          <li><span class="when">apr 2005 – juuli 2018</span><span class="what"><strong>IT-juht</strong><span>Haapsalu Nikolai Kool</span></span></li>
+          <li><span class="when">jaan 2001 – märts 2003</span><span class="what"><strong>IT-spetsialist</strong><span>Läänemaa Postkontor</span></span></li>
+          <li><span class="when">sept 1998 – aug 2008</span><span class="what"><strong>IT-juht ja arvutiõpetaja</strong><span>Haapsalu Gümnaasium</span></span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">Haridustee</h3>
+        <ul class="timeline">
+          <li><span class="when">2024 – 2025</span><span class="what"><strong>Cloud-native application design and DevOps</strong><span>Tartu Ülikool, mikrokraad (5.02.2024 – 1.02.2025)</span></span></li>
+          <li><span class="when">2006 – 2009</span><span class="what"><strong>Rakendusinformaatika</strong><span>Tallinna Ülikooli Haapsalu Kolledž, rakenduskõrgharidus</span></span></li>
+          <li><span class="when">1998 – 2002</span><span class="what"><strong>Teoloogia</strong><span>EMK Teoloogiline Seminar, rakenduskõrgharidus</span></span></li>
+          <li><span class="when">1993 – 1996</span><span class="what"><strong>Infotöötleja</strong><span>Tallinna Majanduskool, keskeriharidus, lõpetanud kiitusega</span></span></li>
+          <li><span class="when">1993 – 1996</span><span class="what"><strong>Keskharidus</strong><span>Haapsalu 1. Keskkool</span></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENESETÄIENDAMINE -->
+<section id="enesetaiendamine">
+  <div class="wrap">
+    <h2>Enesetäiendamine</h2>
+
+    <h3>Täiendkoolitused</h3>
+    <div class="card">
+      <ul class="list">
+        <li><span class="yr">2025</span><span>Pilveteenuste alused (CompTIA Cloud+), 50 ak tundi<span class="meta">Nordic Koolitus OÜ, Peep Võrno · 02.06.–06.06.2025 · nr 7184</span></span></li>
+        <li><span class="yr">2024</span><span>Hunt The Hacker 2.0 (HtH), 16 tundi<span class="meta">Clarified Security, Allar Viik · 14.11.–15.11.2024 · #134D851</span></span></li>
+        <li><span class="yr">2024</span><span>Hands-on Hacking Essentials (HOHE), 16 tundi<span class="meta">Clarified Security, Sten Mäses · 04.01.–05.01.2024</span></span></li>
+        <li><span class="yr">2023</span><span>JNCIS course: Junos Intermediate Routing (JIR)<span class="meta">26.10.–27.10.2023</span></span></li>
+        <li><span class="yr">2023</span><span>JNCIA-Junos course: Introduction to Junos Operating System (IJOS)<span class="meta">23.10.–25.10.2023</span></span></li>
+        <li><span class="yr">2022</span><span>Switching, Routing, and Wireless Essentials (CCNA 2), 72 ak tundi<span class="meta">TTÜ, lektor Mohammad Tariq Meeran · 22.09.–08.12.2022</span></span></li>
+        <li><span class="yr">2022</span><span>Introduction to Networks (CCNA 1), 72 ak tundi<span class="meta">TTÜ, lektor Mohammad Tariq Meeran · 20.09.–06.12.2022</span></span></li>
+        <li><span class="yr">2021</span><span>ITIL 4 Foundation IT Service Management, 16 tundi<span class="meta">Meriroos OÜ, lektor Avo Raup · 13.–14.12.2021 · sertifikaadi nr GR671353071VN</span></span></li>
+        <li><span class="yr">2021</span><span>MS-900T01-A: Microsoft 365 Fundamentals, 8 tundi<span class="meta">13.09.2021</span></span></li>
+        <li><span class="yr">2021</span><span>Küberturvalisuse koolitamine küberturbe lipuvõistluse (CTF) meetodil<span class="meta">25.–26.02.2021</span></span></li>
+        <li><span class="yr">2019</span><span>Arukas ajajuhtimine, 8 tundi<span class="meta">Selge Pilt OÜ, lektor Kristjan Otsmann · 28.01.2019</span></span></li>
+        <li><span class="yr">2016</span><span>EUCIP Core Level Certificate<span class="meta">12.02.2016 · serial nr EE100192</span></span></li>
+      </ul>
+      <details>
+        <summary>Varasemad koolitused (2000–2013)</summary>
+        <ul class="list">
+          <li><span class="yr">2013</span><span>Linuxi meistriklass, 24 tundi<span class="meta">BCS Koolitus, lektor Taavi Rõivas · 13.–15.02.2013</span></span></li>
+          <li><span class="yr">2008</span><span>Isikuandmete kaitse ja avalikustamine, 4 tundi<span class="meta">Stokmann Koolitus, lektor Merit Vaim · 06.06.2008</span></span></li>
+          <li><span class="yr">2004</span><span>Võrguturbekoolitus, 16 tundi<span class="meta">BCS Koolitus, lektor Tanel Rõigas · 04.–05.06.2004</span></span></li>
+          <li><span class="yr">2003</span><span>Linux – Samba kohtvõrguserver, 8 tundi<span class="meta">BCS Koolitus, lektor Marko Kääramees · 19.08.2003</span></span></li>
+          <li><span class="yr">2003</span><span>Õpetaja põhifunktsioonid, 8 tundi<span class="meta">Merlecons ja KO OÜ, andragoog-konsultant Tarmo Salumaa · 06.08.2003</span></span></li>
+          <li><span class="yr">2003</span><span>„Laiskade“ ja „lohakate“ ning „kohatult“ ja „üleolevalt“ käituvate õpilaste õpetamine ja nendega toimetulek, 8 tundi<span class="meta">Merlecons ja KO OÜ, andragoog-konsultant Tarmo Salumaa · 02.01.2003</span></span></li>
+          <li><span class="yr">2000–2001</span><span>Kaasaegne õpetus, 160 tundi<span class="meta">TLÜ Haapsalu Kolledž · 25.10.2000–24.08.2001</span></span></li>
+          <li><span class="yr">2000</span><span>Linux võrguserveri administreerimine, 32 tundi<span class="meta">BCS Koolitus, lektor Marko Kääramees · 27.–30.08.2000</span></span></li>
+        </ul>
+      </details>
+    </div>
+
+    <h3>Osalemine rahvusvahelistes projektides</h3>
+    <div class="card">
+      <ul class="list">
+        <li><span class="yr">2023</span><span>Erasmus+ — õpilaste juhendamine välislähetusel<span class="meta">Villagracia de Arosa, Hispaania</span></span></li>
+        <li><span class="yr">2023</span><span>Erasmus+ — õpilaste juhendamine välislähetusel<span class="meta">Westport, Iirimaa</span></span></li>
+        <li><span class="yr">2022</span><span>Erasmus+ — õpilaste juhendamine välislähetusel<span class="meta">Palencia, Hispaania</span></span></li>
+        <li><span class="yr">2022</span><span>Erasmus+ — õpilaste juhendamine välislähetusel<span class="meta">London, Suurbritannia</span></span></li>
+        <li><span class="yr">2019</span><span>Erasmus+ projekt „Head oskused annavad ameti“ — õpiränne kutsekoolidevahelise koostöö arendamiseks IT erialal<span class="meta">Dublin, Iirimaa</span></span></li>
+        <li><span class="yr">2019</span><span>Erasmus+ — õpilaste juhendamine välislähetusel<span class="meta">London, Suurbritannia</span></span></li>
+        <li><span class="yr">2017–2018</span><span>Erasmus+ — õpilaste juhendamine välislähetusel<span class="meta">Taani</span></span></li>
+        <li><span class="yr">2012</span><span>Leonardo da Vinci projekt „Töövarjuna Euroopa kutsekoolides“ — erialane õpiränne<span class="meta">EUC Syd Kolledž, Taani (IT)</span></span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- KOOLITUSED -->
+<section id="koolitused">
+  <div class="wrap">
+    <h2>Läbiviidud koolitused</h2>
+
+    <h3>Haridus- ja Teadusministeeriumi riiklik koolitustellimus</h3>
+    <p style="margin-top:0;color:var(--muted)">Arvutikursused programmi „Täiskasvanuhariduse edendamine ja õppimisvõimaluste avardamine“ raames.</p>
+    <div class="card">
+      <ul class="list">
+        <li><span class="yr">2026</span><span>E-poe tegemine WordPressi abil<span class="meta">20 akadeemilist tundi</span></span></li>
+        <li><span class="yr">2025</span><span>Kodulehe loomine vabavaralise sisuhaldussüsteemi WordPress abil<span class="meta">40 akadeemilist tundi</span></span></li>
+        <li><span class="yr">2025</span><span>E-poe tegemine WordPressi abil<span class="meta">20 akadeemilist tundi</span></span></li>
+        <li><span class="yr">2021</span><span>Andmeanalüüs MS Exceliga<span class="meta">33 akadeemilist tundi</span></span></li>
+        <li><span class="yr">2021</span><span>Kodulehe loomine vabavaralise sisuhaldussüsteemi WordPress abil<span class="meta">40 akadeemilist tundi</span></span></li>
+        <li><span class="yr">2018</span><span>Kodulehe loomine vabavaralise sisuhaldussüsteemi WordPress abil<span class="meta">40 akadeemilist tundi</span></span></li>
+        <li><span class="yr">2016</span><span>Kodulehe loomine vabavaralise sisuhaldussüsteemi WordPress abil<span class="meta">40 akadeemilist tundi</span></span></li>
+      </ul>
+    </div>
+
+    <div class="grid2" style="margin-top:18px">
+      <div class="card">
+        <h3 style="margin-top:0">Eesti Töötukassa klientidele</h3>
+        <ul class="list">
+          <li><span class="yr">2015</span><span>Arvutikoolitus (vene keeles)<span class="meta">80 tundi</span></span></li>
+          <li><span class="yr">2014</span><span>„Arvuti algõpe“ (vene keeles) — „Начальный курс компьютерного обучения“<span class="meta">40 tundi</span></span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">Kesk-Eesti Arenduskeskus</h3>
+        <ul class="list">
+          <li><span class="yr">2009</span><span>Täiskasvanutele AO 1–7 koolitused<span class="meta">märts–aug 2009 · 80 tundi</span></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ÕPPEMATERJALID -->
+<section id="oppematerjalid">
+  <div class="wrap">
+    <h2>Õppematerjalid</h2>
+    <p style="margin-top:0">Olen loonud õppematerjale õpilastele erinevate allikate põhjal.</p>
+    <div class="grid2">
+      <div class="card">
+        <h3 style="margin-top:0">Operatsioonisüsteemide alused</h3>
+        <p>Olen teinud õpilastele refereeringu Elena Vendelini sissejuhatavast kursusest „Operatsioonisüsteemid“. Jagan õpilastele ka teisi häid internetis leiduvaid materjale ja olen osa neist eestindanud, näiteks mäluhalduse teema, kuhu olen kogunud ka seda teemat tutvustavaid videomaterjale.</p>
+        <p>Õpitu hindamiseks kasutan Google Formsiga koostatud teooriateste.</p>
+        <p><a href="https://sites.google.com/hkhk.edu.ee/operatsioonisysteemid/operatsioonis%C3%BCsteemid/m%C3%A4luhaldus" target="_blank" rel="noopener">Mäluhaldus →</a></p>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">Windowsi operatsioonisüsteemid</h3>
+        <p>See valdkond areneb kiiresti ja internetis on palju väga häid materjale, mida selles aines õpilastega jagan. Mõned neist olen järk-järgult ka eestindanud.</p>
+        <p><a href="https://sites.google.com/hkhk.edu.ee/windows-server/k%C3%A4ed-vaba-windows-10-paigaldus-l%C3%A4bi-wds-i" target="_blank" rel="noopener">Käed vaba Windows 10 paigaldus läbi WDS-i →</a></p>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">IT taristu ülalhoid</h3>
+        <p>Olen koostanud hulga offline-materjale ja esitlusi, mille teemad on näiteks IT-õigus, projektijuhtimine, hanked, dokumentatsioon ja IT-strateegia koostamine.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALDKONNA ARENDUS -->
+<section id="valdkonna-arendus">
+  <div class="wrap">
+    <h2>Valdkonna arendus</h2>
+    <h3 style="margin-top:0">Õppelabori arendus</h3>
+    <p>Et IT-õpilaste õppekeskkond oleks parem, arendame koolis välja erinevaid õppelaboreid. Nendega õpetame oskusi, mida õpilased tulevases IT-maailmas vajavad.</p>
+    <div class="grid2">
+      <div class="card">
+        <h3 style="margin-top:0">Proxmox VE virtualiseerimiskeskkond</h3>
+        <p>Õpilased seadistavad ja haldavad virtuaalservereid (nii Windowsi kui Linuxi) ning loovad seal väikeettevõtte miniatuurse taristu. Keskkond annab neile rohkem paindlikkust: neile eraldatud servereid ja kliendimasinaid saab seadistada ja hallata ka väljaspool kooli.</p>
+        <p><a href="https://www.proxmox.com/en/proxmox-ve" target="_blank" rel="noopener">proxmox.com →</a></p>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">Confluence koolipraktika dokumentatsiooniks</h3>
+        <p>Täiskasvanute koolipraktika dokumentatsiooni haldamiseks oleme kasutusele võtnud Atlassiani Confluence'i keskkonna. Selles dokumenteerivad ja süstematiseerivad õpilased koolipraktika käigus IT-taristuga seotud teavet, näiteks seadmete nimetusi ja seadistusi.</p>
+        <p><a href="https://www.atlassian.com/software/confluence" target="_blank" rel="noopener">atlassian.com/confluence →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOBID -->
+<section id="hobid">
+  <div class="wrap">
+    <h2>Hobid</h2>
+    <ul class="hobbies">
+      <li><span class="ic">⚽</span>Jalgpallikohtunik</li>
+      <li><span class="ic">🏸</span>Sulgpall</li>
+      <li><span class="ic">🏋️</span>Jõutrenn</li>
+      <li><span class="ic">🎸</span>Kitarrimäng</li>
+      <li><span class="ic">📚</span>Raamatute lugemine</li>
+      <li><span class="ic">📷</span>Fotograafia (varasemalt tõsisemalt)</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> Valdo Nõlvak</span>
+    <span><a href="#avaleht">Tagasi üles ↑</a></span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+// Aktiivse menüüpunkti esiletõstmine kerimisel
+const links=[...document.querySelectorAll('nav a')];
+const targets=links.map(a=>document.querySelector(a.getAttribute('href')));
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id));}})},{rootMargin:'-45% 0px -50% 0px'});
+targets.forEach(t=>t&&obs.observe(t));
+</script>
+</body>
+</html>
